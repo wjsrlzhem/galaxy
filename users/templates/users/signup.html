@@ -1,0 +1,25 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'sign.css' %}">
+회원가입 페이지
+<br>
+<img src="{% static 'background.jpg' %}" alt="">
+<br>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>아이디</p>
+    <input name = "username" type="text">
+    <p>비밀 번호</p>
+    <input name = "password" type="password">
+    <p>성</p>
+    <input name = "firstname" type="text">
+    <p>이름</p>
+    <input name = "lastname" type="text">
+    <p>이메일</p>
+    <input name = "email" type="text">
+    <p>학번</p>
+    <input name = "student_id" type="text">
+    <p>프로필 사진</p>
+    <input name="profile_img" type="file">
+    <input type="submit" value="회원가입">
+</form>
